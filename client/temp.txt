@@ -1,0 +1,6 @@
+src\components\CuratorDashboard.js
+src\components\Discussion.js
+src\components\Login.js
+src\components\ProfileSetup.js
+src\components\Register.js
+src\components\Roadmap.js
