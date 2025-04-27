@@ -10,7 +10,7 @@ import React, { useState, useEffect } from 'react';
        useEffect(() => {
          const fetchDiscussions = async () => {
            try {
-             const response = await fetch(`http://localhost:5001/api/discussions/${roadmap}`);
+             const response = await fetch(`${process.env.REACT_APP_API_URL}/api/discussions/${roadmap}`);
              const data = await response.json();
              setDiscussions(data);
            } catch (error) {
@@ -22,7 +22,7 @@ import React, { useState, useEffect } from 'react';
 
        const handlePost = async () => {
          try {
-           const response = await fetch('http://localhost:5001/api/discussions', {
+          const response = await fetch(`${process.env.REACT_APP_API_URL}/api/discussions`, {
              method: 'POST',
              headers: { 'Content-Type': 'application/json' },
              body: JSON.stringify({ roadmap, userEmail, message })
